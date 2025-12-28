@@ -1,67 +1,42 @@
-/* Hiệu ứng cuộn mượt cho toàn trang */
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
-}
-
-.hero-section {
-    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); /* Màu gradient nổi bật */
-    /* Hoặc dùng tông xanh đen như ảnh cũ của bạn: */
-    background: linear-gradient(to right, #243b55, #141e30);
-    padding-top: 100px;
-    padding-bottom: 120px;
-}
-
-.divider {
-    width: 60px;
-    height: 3px;
-    background-color: white;
-}
-
-/* Xóa gạch chân mặc định của link cho ô vuông */
-.card-link {
-    text-decoration: none;
-    color: white;
-    display: block;
-}
-
+/* Style cho các ô vuông giống hệt mẫu bên trái */
 .info-card {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    padding: 35px 20px;
+    background: rgba(255, 255, 255, 0.15); /* Nền trắng cực nhẹ */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Viền trắng mảnh nhưng rõ hơn */
+    border-radius: 15px; /* Bo góc tròn vừa phải */
+    padding: 40px 20px;
     transition: all 0.3s ease;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px); /* Hiệu ứng làm mờ nền phía sau ô (Glassmorphism) */
+    text-align: center;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+/* Hiệu ứng khi di chuột vào ô */
 .info-card:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.25); /* Sáng lên một chút */
+    border-color: rgba(255, 255, 255, 0.8); /* Viền sáng rực lên */
+    transform: translateY(-10px); /* Nhảy nhẹ lên trên */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Đổ bóng cho có độ sâu */
 }
 
 .info-card h5 {
     font-weight: 700;
-    font-size: 1.15rem;
-    margin-bottom: 12px;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-.section-main-title {
-    font-size: 2.8rem;
-    font-weight: 700;
+.info-card p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    line-height: 1.4;
+    margin-bottom: 0;
 }
 
-.lab-item {
-    border-radius: 15px;
-    border-bottom: 4px solid #141e30;
-    transition: 0.3s;
-}
-
-.lab-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+/* Xóa gạch chân của link bao quanh ô */
+.card-link {
+    text-decoration: none !important;
 }
