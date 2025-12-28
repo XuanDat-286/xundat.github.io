@@ -1,4 +1,4 @@
-/* Thiết lập chung */
+/* Tổng quát */
 html {
     scroll-behavior: smooth;
 }
@@ -6,78 +6,60 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     color: #333;
-    overflow-x: hidden;
 }
 
-/* Header Gradient xám đen như mẫu */
+/* Header */
 .hero-section {
-    background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+    background: linear-gradient(135deg, #1e293b 0%, #000000 100%);
     padding: 100px 0;
-    min-height: 80vh;
 }
 
-/* Style cho các ô vuông (CÁI NÀY GIÚP DỄ NHÌN) */
+/* Card Header */
 .info-card {
-    background: rgba(255, 255, 255, 0.1); /* Nền mờ trắng nhẹ */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Viền mảnh trắng */
-    border-radius: 15px; /* Bo góc tròn chuyên nghiệp */
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
     padding: 35px 20px;
     height: 100%;
-    transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(10px); /* Hiệu ứng kính mờ giúp chữ nổi bật */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
     color: white;
+    text-align: center;
 }
 
-/* Hiệu ứng khi rê chuột vào ô */
 .info-card:hover {
     background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.9);
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    border-color: white;
 }
 
-.info-card h5 {
-    color: #ffffff !important;
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
+.info-card h5 { font-weight: 700; margin-bottom: 12px; }
+.info-card p { font-size: 0.85rem; opacity: 0.8; margin-bottom: 0; }
+.card-link { text-decoration: none !important; }
 
-.info-card p {
-    color: rgba(255, 255, 255, 0.8) !important;
-    font-size: 0.85rem;
-    line-height: 1.5;
-    margin-bottom: 0;
-}
+/* Section Vấn đề */
+.section-title { font-weight: 700; color: #1e293b; }
+.divider { width: 60px; height: 4px; background: #3b82f6; border-radius: 2px; }
 
-/* Xóa gạch chân link */
-.card-link {
-    text-decoration: none !important;
-}
-
-/* Tiêu đề mục nội dung bên dưới */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.divider {
-    width: 60px;
-    height: 4px;
-    background: #2c3e50;
-    border-radius: 2px;
-}
-
-/* Style cho Lab boxes */
-.lab-box {
-    border-radius: 10px;
+.problem-item {
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
     transition: 0.3s;
 }
 
-.lab-box:hover {
+.problem-item:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.problem-item h5 { font-size: 1rem; color: #0f172a; }
