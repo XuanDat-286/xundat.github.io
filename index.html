@@ -19,7 +19,7 @@
                     <li class="nav-item"><a class="nav-link" href="#problem">Vấn đề</a></li>
                     <li class="nav-item"><a class="nav-link" href="#components">Thành phần</a></li>
                     <li class="nav-item"><a class="nav-link" href="#architecture">Kiến trúc</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#lab-exercises">Thực hiện</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#lab-exercises">Big Data</a></li>
                 </ul>
             </div>
         </div>
@@ -29,15 +29,12 @@
         <div class="container py-5">
             <h1 class="display-4 fw-bold mt-4">XỬ LÝ DỮ LIỆU LỚN</h1>
             <h2 class="h3 mb-4 fw-light">Với kỹ thuật Giám sát nhận biết</h2>
-            <p class="mb-5 opacity-75">MultiADS: GIÁM SÁT NHẬN BIẾT LỖI ĐỂ PHÁT HIỆN VÀ PHÂN ĐOẠN BẤT THƯỜNG ĐA DẠNG TRONG HỌC KHÔNG CẦN DỮ LIỆU HUẤN LUYỆN
-</p>
             
-            <div class="row g-4 justify-content-center mb-5">
+            <div class="row g-4 justify-content-center mb-5 mt-5">
                 <div class="col-6 col-md-3">
                     <a href="#problem" class="card-link">
                         <div class="info-card">
                             <h5>Vấn đề</h5>
-                            <p>Hạn chế hiện tại & Giải pháp Big Data</p>
                         </div>
                     </a>
                 </div>
@@ -45,7 +42,6 @@
                     <a href="#components" class="card-link">
                         <div class="info-card">
                             <h5>Thành phần</h5>
-                            <p>Spark + Hadoop + Surveillance</p>
                         </div>
                     </a>
                 </div>
@@ -53,7 +49,6 @@
                     <a href="#architecture" class="card-link">
                         <div class="info-card">
                             <h5>Kiến trúc</h5>
-                            <p>Mô hình xử lý và lưu trữ dữ liệu</p>
                         </div>
                     </a>
                 </div>
@@ -61,7 +56,6 @@
                     <a href="#lab-exercises" class="card-link">
                         <div class="info-card">
                             <h5>Big Data</h5>
-                            <p>Xử lý song song trên Cluster</p>
                         </div>
                     </a>
                 </div>
@@ -71,52 +65,78 @@
 
     <section id="problem" class="py-5 bg-white">
         <div class="container py-5">
-            <h2 class="fw-bold section-title text-center">VẤN ĐỀ CỐT LÕI (CORE PROBLEM)</h2>
+            <h2 class="fw-bold section-title text-center">VẤN ĐỀ</h2>
             <div class="divider mx-auto my-4"></div>
-            
-            <p class="text-center text-muted mb-5 col-md-10 mx-auto">
-                Hầu hết các phương pháp phát hiện bất thường (Anomaly Detection - AD) hiện nay, đặc biệt là trong học máy zero-shot, đang gặp phải các hạn chế sau:
-            </p>
-
             <div class="row g-4 mt-2">
                 <div class="col-md-4">
                     <div class="problem-item p-4 h-100 shadow-sm">
-                        <div class="icon-circle mb-3 bg-danger-subtle text-danger">
-                            <i class="fa-solid fa-circle-exclamation fa-xl"></i>
-                        </div>
-                        <h5 class="fw-bold">Chỉ dừng lại ở phân loại nhị phân</h5>
-                        <p class="text-muted small">Các mô hình hiện tại thường chỉ phân biệt được sản phẩm là "Bình thường" (Normal) hay "Bất thường" (Abnormal).</p>
+                        <div class="icon-circle mb-3 bg-danger-subtle text-danger"><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <h6>Phân loại nhị phân</h6>
+                        <p class="small text-muted">Hạn chế trong việc chỉ phân biệt Bình thường/Bất thường.</p>
                     </div>
                 </div>
-
                 <div class="col-md-4">
                     <div class="problem-item p-4 h-100 shadow-sm">
-                        <div class="icon-circle mb-3 bg-warning-subtle text-warning">
-                            <i class="fa-solid fa-microscope fa-xl"></i>
-                        </div>
-                        <h5 class="fw-bold">Thiếu khả năng nhận diện loại lỗi</h5>
-                        <p class="text-muted small">Không thể chỉ ra lỗi cụ thể (trầy xước, vết cắt...). Việc biết chính xác loại lỗi là cực kỳ quan trọng để tự động hóa xử lý thực tế.</p>
+                        <div class="icon-circle mb-3 bg-warning-subtle text-warning"><i class="fa-solid fa-microscope"></i></div>
+                        <h6>Nhận diện loại lỗi</h6>
+                        <p class="small text-muted">Thiếu khả năng chỉ rõ lỗi trầy xước, vết cắt, uốn cong.</p>
                     </div>
                 </div>
-
                 <div class="col-md-4">
                     <div class="problem-item p-4 h-100 shadow-sm">
-                        <div class="icon-circle mb-3 bg-info-subtle text-info">
-                            <i class="fa-solid fa-layer-group fa-xl"></i>
-                        </div>
-                        <h5 class="fw-bold">Mất mát thông tin khi trung bình hóa</h5>
-                        <p class="text-muted small">Các phương pháp CLIP cũ gộp chung prompts thành vector trung bình, dẫn đến việc mất đi các đặc điểm riêng biệt của từng loại lỗi.</p>
+                        <div class="icon-circle mb-3 bg-info-subtle text-info"><i class="fa-solid fa-layer-group"></i></div>
+                        <h6>Mất mát thông tin</h6>
+                        <p class="small text-muted">CLIP cũ gây mất đặc điểm riêng biệt khi trung bình hóa.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="components" class="py-5 bg-light">
-        <div class="container py-5 text-center">
-            <h2 class="fw-bold section-title">CÁC THÀNH PHẦN HỆ THỐNG</h2>
+    <section id="architecture" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="fw-bold section-title text-center">KIẾN TRÚC </h2>
             <div class="divider mx-auto my-4"></div>
-            <p>Spark Stream, Hadoop HDFS, và mô hình nhận thức độ sâu.</p>
+            <div class="row mt-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="pe-lg-4">
+                        <h4 class="fw-bold mb-3">Mô hình huấn luyện hệ thống</h4>
+                        <div class="mt-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fa-solid fa-square-check text-primary me-2"></i>
+                                <span>Tối ưu hóa tham số mạng Neural</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fa-solid fa-square-check text-primary me-2"></i>
+                                <span>Xử lý song song trên GPU/TPU</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+                    <img src="Train.png" alt="Kiến trúc huấn luyện" class="img-fluid rounded shadow-lg img-custom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lab-exercises" class="py-5 bg-white">
+        <div class="container py-5">
+            <h2 class="fw-bold section-title text-center">XỬ LÝ TRÊN HỆ THỐNG BIG DATA</h2>
+            <div class="divider mx-auto my-4"></div>
+            <div class="row mt-5 g-4 flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 text-center">
+                    <img src="Map.png" alt="Kết quả MapReduce" class="img-fluid rounded shadow-lg img-custom">
+                </div>
+                <div class="col-lg-6">
+                    <div class="ps-lg-4">
+                        <h4 class="fw-bold mb-3">Phân tích kết quả Map</h4>
+                        <div class="p-3 bg-light rounded mt-4 border-start border-primary border-4">
+                            <p class="mb-0 small italic">"Khả năng mở rộng hệ thống cho phép xử lý hàng triệu bản ghi cùng lúc mà không làm giảm độ chính xác."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -124,7 +144,7 @@
         <div class="container">
             <p class="mb-1 fw-bold">GVHD: ThS Trần Anh Đạt</p>
             <p class="mb-3">Nhóm 12 - 64HTTT2</p>
-            <p class="small opacity-50">© 2025 Dự án Big Data</p>
+            <p class="small opacity-50 mb-0">© 2025 Dự án Big Data</p>
         </div>
     </footer>
 
