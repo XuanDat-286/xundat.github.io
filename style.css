@@ -6,60 +6,70 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     color: #333;
+    line-height: 1.6;
 }
 
-/* Header */
+/* Header Gradient */
 .hero-section {
-    background: linear-gradient(135deg, #1e293b 0%, #000000 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     padding: 100px 0;
 }
 
-/* Card Header */
+/* 4 Ô vuông Header */
 .info-card {
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
-    padding: 35px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 30px 15px;
     height: 100%;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
     color: white;
-    text-align: center;
 }
 
 .info-card:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-10px);
-    border-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-.info-card h5 { font-weight: 700; margin-bottom: 12px; }
-.info-card p { font-size: 0.85rem; opacity: 0.8; margin-bottom: 0; }
+.info-card h5 { font-weight: 700; margin-bottom: 10px; }
+.info-card p { font-size: 0.8rem; opacity: 0.8; margin-bottom: 0; }
 .card-link { text-decoration: none !important; }
 
-/* Section Vấn đề */
-.section-title { font-weight: 700; color: #1e293b; }
-.divider { width: 60px; height: 4px; background: #3b82f6; border-radius: 2px; }
+/* Section Title */
+.section-title { font-weight: 700; color: #1e293b; text-transform: uppercase; }
+.divider { width: 50px; height: 4px; background: #3b82f6; border-radius: 2px; }
 
+/* Problem Items */
 .problem-item {
-    background: #fff;
     border-radius: 15px;
-    border: 1px solid #e2e8f0;
+    background: #fff;
     transition: 0.3s;
 }
 
-.problem-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
 .icon-circle {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.problem-item h5 { font-size: 1rem; color: #0f172a; }
+/* Style cho Ảnh Train.png và Map.png */
+.img-custom {
+    border: 8px solid #fff;
+    transition: transform 0.4s ease;
+    max-height: 400px; /* Giới hạn chiều cao để không bị quá to */
+    object-fit: cover;
+}
+
+.img-custom:hover {
+    transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+    letter-spacing: 1px;
+}
