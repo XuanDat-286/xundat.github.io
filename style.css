@@ -1,0 +1,165 @@
+/* General Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #212529 !important; /* Darker grey */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    padding: 1rem 0;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e0e1dd !important; /* Light grey */
+}
+.nav-link {
+    color: #e0e1dd !important;
+    font-weight: 600;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: #6a9bd8 !important; /* Accent blue */
+}
+
+/* Hero Section */
+.hero-section {
+    height: 90vh;
+    background: linear-gradient(rgba(33, 37, 41, 0.7), rgba(33, 37, 41, 0.7)), url('https://images.unsplash.com/photo-1543286386-77983652875b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat;
+    color: #e0e1dd;
+    position: relative;
+    overflow: hidden;
+}
+.hero-section h1, .hero-section h2 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.info-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    max-width: 400px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.info-box p {
+    color: #f0f0f0;
+}
+.hero-section .btn-outline-light {
+    border-color: #6a9bd8;
+    color: #6a9bd8;
+    transition: all 0.3s ease;
+}
+.hero-section .btn-outline-light:hover {
+    background-color: #6a9bd8;
+    color: #212529;
+}
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 800;
+    color: #212529;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #6a9bd8; /* Accent blue */
+    border-radius: 2px;
+}
+
+/* Paper Card */
+.paper-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+}
+.paper-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+.paper-card .btn-primary {
+    background-color: #6a9bd8;
+    border-color: #6a9bd8;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.paper-card .btn-primary:hover {
+    background-color: #4a7ab8;
+    border-color: #4a7ab8;
+}
+
+/* Lab Cards */
+.lab-card {
+    background-color: #fff;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e1dd;
+}
+.lab-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+    border-color: #6a9bd8;
+}
+.lab-icon {
+    color: #6a9bd8; /* Accent blue */
+}
+.lab-card .btn-outline-dark {
+    border-color: #6a9bd8;
+    color: #6a9bd8;
+}
+.lab-card .btn-outline-dark:hover {
+    background-color: #6a9bd8;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: #212529 !important;
+    color: #e0e1dd;
+}
+
+/* Animation utilities (Optional, for hero section) */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.animate__animated.animate__fadeInDown {
+    animation: fadeInDown 1s ease-out forwards;
+}
+.animate__animated.animate__fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+.animate__animated.animate__zoomIn {
+    animation: zoomIn 1s ease-out forwards;
+    animation-delay: 1s;
+}
+.animate__animated.animate__pulse.animate__infinite {
+    animation: pulse 2s infinite ease-in-out;
+    animation-delay: 1.5s;
+}
