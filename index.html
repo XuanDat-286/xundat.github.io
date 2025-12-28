@@ -11,10 +11,10 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#"><span class="text-dark">DEPTH - </span><span class="text-primary">AWARE</span></a>
-            <div class="collapse navbar-collapse">
+            <a class="navbar-brand fw-bold" href="#">BIG DATA & SURVEILLANCE</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#problem">Vấn đề</a></li>
                     <li class="nav-item"><a class="nav-link" href="#components">Thành phần</a></li>
@@ -27,117 +27,101 @@
 
     <header class="hero-section text-center text-white">
         <div class="container py-5">
-            <h1 class="display-4 fw-bold mt-5">Xử lý dữ liệu lớn với kỹ thuật Giám sát nhận biết</h1>
-            <div class="divider mx-auto my-4"></div>
+            <h1 class="display-4 fw-bold mt-4">XỬ LÝ DỮ LIỆU LỚN</h1>
+            <h2 class="h3 mb-4 fw-light">Với kỹ thuật Giám sát nhận biết</h2>
             <p class="mb-5 opacity-75">Big Data & Surveillance Awareness with High Performance Computing</p>
             
             <div class="row g-4 justify-content-center mb-5">
                 <div class="col-6 col-md-3">
                     <a href="#problem" class="card-link">
-                        <div class="info-card h-100">
+                        <div class="info-card">
                             <h5>Vấn đề</h5>
-                            <p class="small">Hạn chế hiện tại & Giải pháp Big Data</p>
+                            <p>Hạn chế hiện tại & Giải pháp Big Data</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
                     <a href="#components" class="card-link">
-                        <div class="info-card h-100">
-                            <h5>Các Thành phần</h5>
-                            <p class="small">Spark + Hadoop + Surveillance</p>
+                        <div class="info-card">
+                            <h5>Thành phần</h5>
+                            <p>Spark + Hadoop + Surveillance</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
                     <a href="#architecture" class="card-link">
-                        <div class="info-card h-100">
+                        <div class="info-card">
                             <h5>Kiến trúc</h5>
-                            <p class="small">Mô hình xử lý và lưu trữ dữ liệu</p>
+                            <p>Mô hình xử lý và lưu trữ dữ liệu</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
                     <a href="#lab-exercises" class="card-link">
-                        <div class="info-card h-100">
+                        <div class="info-card">
                             <h5>Big Data</h5>
-                            <p class="small">Xử lý song song trên Cluster</p>
+                            <p>Xử lý song song trên Cluster</p>
                         </div>
                     </a>
                 </div>
             </div>
+
+            <a href="#problem" class="btn btn-outline-light rounded-pill px-4 mt-3">Khám phá ngay</a>
         </div>
     </header>
 
-    <section id="problem" class="py-5 bg-white border-bottom">
-        <div class="container py-5">
-            <h2 class="fw-bold section-main-title text-center">Tổng Quan & Định Nghĩa Vấn Đề</h2>
-            <div class="row mt-5">
-                <div class="col-md-8 mx-auto">
-                    <p class="lead">Mô tả chi tiết về các hạn chế hiện tại trong việc xử lý dữ liệu giám sát và lý do tại sao cần áp dụng kỹ thuật giám sát nhận biết kết hợp với Big Data.</p>
-                </div>
+    <section id="problem" class="py-5 bg-white">
+        <div class="container py-5 text-center">
+            <h2 class="fw-bold section-title">Tổng Quan & Định Nghĩa Vấn Đề</h2>
+            <div class="divider mx-auto my-4"></div>
+            <p class="lead text-muted col-md-8 mx-auto">Nội dung chi tiết về các thách thức trong giám sát dữ liệu lớn...</p>
+        </div>
+    </section>
+
+    <section id="components" class="py-5 bg-light">
+        <div class="container py-5 text-center">
+            <h2 class="fw-bold section-title">Các Thành Phần Hệ Thống</h2>
+            <div class="divider mx-auto my-4"></div>
+            <div class="row mt-4">
+                <div class="col-md-4"><h4>HDFS</h4><p>Lưu trữ</p></div>
+                <div class="col-md-4"><h4>Spark</h4><p>Xử lý</p></div>
+                <div class="col-md-4"><h4>AI</h4><p>Nhận biết</p></div>
             </div>
         </div>
     </section>
 
-    <section id="components" class="py-5 bg-light border-bottom">
-        <div class="container py-5">
-            <h2 class="fw-bold section-main-title text-center">Các Thành Phần Hệ Thống</h2>
-            <div class="row mt-5 text-center">
-                <div class="col-md-4"><h3>Hadoop HDFS</h3><p>Lưu trữ dữ liệu lớn</p></div>
-                <div class="col-md-4"><h3>Apache Spark</h3><p>Xử lý dữ liệu tốc độ cao</p></div>
-                <div class="col-md-4"><h3>Surveillance AI</h3><p>Nhận biết và giám sát</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="architecture" class="py-5 bg-white border-bottom">
-        <div class="container py-5">
-            <h2 class="fw-bold section-main-title text-center">Kiến Trúc Mô Hình</h2>
-            <div class="row mt-5">
-                <div class="col-md-10 mx-auto text-center">
-                    <p>Sơ đồ kiến trúc luồng dữ liệu từ Camera -> Spark Stream -> HDFS -> Dashboard.</p>
-                    <div class="bg-dark text-white p-5 rounded">Ảnh sơ đồ kiến trúc sẽ nằm ở đây</div>
-                </div>
-            </div>
+    <section id="architecture" class="py-5 bg-white">
+        <div class="container py-5 text-center">
+            <h2 class="fw-bold section-title">Kiến Trúc Mô Hình</h2>
+            <div class="divider mx-auto my-4"></div>
+            <div class="p-5 bg-dark text-white rounded shadow-lg">Sơ đồ kiến trúc của bạn sẽ ở đây</div>
         </div>
     </section>
 
     <section id="lab-exercises" class="py-5 bg-light">
         <div class="container py-5">
-            <h2 class="fw-bold section-main-title text-center mb-5">Kết Quả Thực Hiện (Lab)</h2>
-            <div class="row g-4">
+            <h2 class="fw-bold text-center section-title">Bài Tập Thực Hành</h2>
+            <div class="divider mx-auto my-4"></div>
+            <div class="row g-4 mt-2">
                 <div class="col-md-4">
-                    <div class="lab-item p-4 shadow-sm bg-white text-center">
-                        <i class="fa-solid fa-code mb-3 text-primary fa-2x"></i>
-                        <h6>Lab 01: Setup Environment</h6>
-                        <a href="#" class="btn btn-link text-decoration-none p-0 mt-2">Xem chi tiết</a>
+                    <div class="lab-box p-4 bg-white shadow-sm border-bottom border-primary border-4 text-center">
+                        <h5>Lab 01</h5>
+                        <p class="small">Cấu hình Hadoop</p>
+                        <a href="#" class="btn btn-sm btn-dark">Chi tiết</a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="lab-item p-4 shadow-sm bg-white text-center">
-                        <i class="fa-solid fa-database mb-3 text-primary fa-2x"></i>
-                        <h6>Lab 02: Processing Data</h6>
-                        <a href="#" class="btn btn-link text-decoration-none p-0 mt-2">Xem chi tiết</a>
-                    </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="lab-item p-4 shadow-sm bg-white text-center">
-                        <i class="fa-solid fa-microchip mb-3 text-primary fa-2x"></i>
-                        <h6>Lab 03: Performance Analysis</h6>
-                        <a href="#" class="btn btn-link text-decoration-none p-0 mt-2">Xem chi tiết</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
-    <footer class="py-5 bg-white text-center border-top">
+    <footer class="py-5 bg-dark text-white text-center">
         <div class="container">
-            <p class="fw-bold">GVHD: ThS Trần Anh Đạt</p>
-            <p>Nhóm 12 - 64HTTT2</p>
-            <p class="mb-0 text-muted small">© 2025 Xử lý dữ liệu lớn</p>
+            <p class="mb-1 fw-bold">GVHD: ThS Trần Anh Đạt</p>
+            <p class="mb-3">Nhóm 12 - 64HTTT2</p>
+            <p class="small opacity-50">© 2025 Dự án Xử lý dữ liệu lớn</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
